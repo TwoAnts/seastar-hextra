@@ -3,10 +3,6 @@ title: Sea Star
 toc: false
 ---
 
-{{ with .GetPage `/blog` }}
-  {{ .Content }}
-{{ end }}
-
 ## Explore
 
 {{< cards >}}

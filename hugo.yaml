@@ -1,30 +1,69 @@
 # Hugo configuration file
 title: Sea Star
 
+enableRobotsTXT: true
+# Parse Git commit
+enableGitInfo: true
+# enableEmoji: false
+hasCJKLanguage: true
+
+# services:
+#   googleAnalytics:
+#     ID: G-MEASUREMENT_ID
+
+outputs:
+  home: [HTML]
+  page: [HTML]
+  section: [HTML, RSS]
+
+defaultContentLanguage: zh-cn
+languages:
+  zh-cn:
+    languageName: 简体中文
+    languageCode: zh-CN
+    weight: 1
+    title: Sea Star
+  en:
+    languageName: English
+    weight: 2
+    title: Sea Star
+
 # import hextra as module
 module:
+  hugoVersion:
+    extended: true
+    min: "0.146.0"
   imports:
     - path: github.com/imfing/hextra
 
 markup:
-  # allow raw html
+  highlight:
+    noClasses: false
   goldmark:
     renderer:
       unsafe: true
+    extensions:
+      passthrough:
+        delimiters:
+          block: [['\[', '\]'], ['$$', '$$']]
+          inline: [['\(', '\)']]
+        enable: true
 
-  # enable hextra syntax highlight
-  highlight:
-    noClasses: false
+enableInlineShortcodes: true
+
 
 menu:
   main:
-    - name: Blog
+    - identifier: blog
+      name: Blog
       pageRef: /blog
       weight: 1
-    - name: Docs
+    - identifier: documentation
+      name: Documentation
       pageRef: /docs
       weight: 2
-    - name: About
+    - identifier: about
+      name: About
       pageRef: /about
       weight: 3
     - name: Search
@@ -33,19 +72,93 @@ menu:
         type: search
     - name: GitHub
       weight: 5
-      url: "https://github.com/imfing/hextra-starter-template"
+      url: "https://github.com/TwoAnts"
       params:
         icon: github
 
 params:
+  description: The daily blog of lzmyhzy which records life, technology and various trivial matters.
+
   navbar:
     displayTitle: true
     displayLogo: false
+    logo:
+      path: favicon.ico
+      dark: favicon.ico
+      # width: 40
+      # height: 20
+      # link: /
+    width: wide
+
+  page:
+    # full (100%), wide (90rem), normal (80rem)
+    width: normal
+
+  theme:
+    # light | dark | system
+    default: system
+    displayToggle: true
 
   footer:
-    displayCopyright: false
+    enable: true
+    displayCopyright: true
     displayPoweredBy: true
+    width: normal
+
+  # Display the last modification date
+  displayUpdatedDate: true
+  dateFormat: "January 2, 2006"
+
+  # Search
+  # flexsearch is enabled by default
+  search:
+    enable: true
+    type: flexsearch
+
+    flexsearch:
+      # index page by: content | summary | heading | title
+      index: content
+      # full | forward | reverse | strict
+      # https://github.com/nextapps-de/flexsearch/#tokenizer-prefix-search
+      tokenize: forward
 
   editURL:
-    enable: false
+    enable: true
     base: "https://github.com/TwoAnts/seastar-hextra/edit/main/content"
+
+  blog:
+    list:
+      displayTags: true
+      # date | lastmod | publishDate | title | weight
+      sortBy: date
+      sortOrder: desc # or "asc"
+
+    article:
+      displayPagination: true
+
+  toc:
+    displayTags: true
+
+  highlight:
+    copy:
+      enable: true
+      # hover | always
+      display: hover
+
+  comments:
+    enable: false
+    type: giscus
+
+    # https://giscus.app/
+    giscus:
+      repo: TwoAnts/seastar-hextra
+      repoId: R_kgDOPA2twQ
+      category: General
+      categoryId: DIC_kwDOPA2twc4Cr6lY
+      mapping: pathname
+      strict: 0
+      reactionsEnabled: 1
+      emitMetadata: 0
+      inputPosition: top
+      lang: zh-CN
+      theme: noborder_dark

@@ -81,7 +81,7 @@ params:
 
   navbar:
     displayTitle: true
-    displayLogo: false
+    displayLogo: true
     logo:
       path: favicon.ico
       dark: favicon.ico

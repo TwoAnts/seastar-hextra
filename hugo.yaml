@@ -157,8 +157,8 @@ params:
       categoryId: DIC_kwDOPA2twc4Cr6lY
       mapping: pathname
       strict: 0
-      reactionsEnabled: 1
+      reactionsEnabled: 0
       emitMetadata: 0
       inputPosition: top
       lang: zh-CN
-      theme: noborder_dark
+      theme: noborder_light

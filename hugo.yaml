@@ -146,7 +146,7 @@ params:
       display: hover
 
   comments:
-    enable: false
+    enable: true
     type: giscus
 
     # https://giscus.app/

@@ -1,5 +1,6 @@
 ---
 linkTitle: 文档
+weight: 2
 breadcrumbs: false
 comments: false
 excludeSearch: true

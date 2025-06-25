@@ -1,5 +1,7 @@
 ---
-title: "博客"
+linkTitle: 博客
+title: 博客
+weight: 1
 ---
 
 <div style="text-align: center; margin-top: 1em;">

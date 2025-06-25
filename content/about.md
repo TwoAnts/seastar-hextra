@@ -1,5 +1,6 @@
 ---
 title: 关于
+weight: 3
 type: about
 comments: false
 ---

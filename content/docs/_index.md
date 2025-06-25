@@ -1,4 +1,5 @@
 ---
+linkTitle: "文档"
 breadcrumbs: false
 comments: false
 excludeSearch: true

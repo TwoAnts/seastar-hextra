@@ -23,10 +23,10 @@ languages:
     languageCode: zh-CN
     weight: 1
     title: Sea Star
-  en:
-    languageName: English
-    weight: 2
-    title: Sea Star
+  # en:
+  #   languageName: English
+  #   weight: 2
+  #   title: Sea Star
 
 # import hextra as module
 module:

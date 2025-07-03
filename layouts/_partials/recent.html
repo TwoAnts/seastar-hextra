@@ -1,0 +1,8 @@
+<ul>
+{{ range first 5 (where .Site.RegularPages "Section" "in" .Site.MainSections) }}
+<li>
+    <a href="{{ .Permalink }}">{{ .Title }}</a>
+    <span>{{ partial "utils/format-date" .Date }}</span>
+</li>
+{{ end }}
+</ul>

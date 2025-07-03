@@ -51,6 +51,9 @@ markup:
 
 enableInlineShortcodes: true
 
+mainSections:
+  - blog
+  - docs
 
 menu:
   main:

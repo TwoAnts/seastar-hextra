@@ -126,7 +126,7 @@ params:
       tokenize: forward
 
   editURL:
-    enable: true
+    enable: false
     base: "https://github.com/TwoAnts/seastar-hextra/edit/main/content"
 
   blog:
